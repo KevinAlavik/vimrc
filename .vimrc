@@ -22,7 +22,9 @@ set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 set bg=dark
 let mapleader = "\<Space>"
+command OpenRightTerminal vertical botright terminal zsh
 
+nnorema <leader>tt :OpenRightTerminal<CR>
 nnoremap <leader>bb :NERDTreeToggle<CR>
 nnoremap <leader>dd dd  " Use Space + dd to delete the current line
 
