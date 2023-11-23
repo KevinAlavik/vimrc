@@ -4,5 +4,16 @@ My VIM config
 **leader** = Space
 
 ## Plugins
-- NERDTree (leader + bb, to toggle)
+- NERDTree
 - Ale
+- fzf
+- lightline
+- emmet-vim
+- vim-eunuch
+
+## Theme
+- gruvbox
+
+## Shortcuts
+- **leader** + bb (normal mode): Toggle NERDTree
+- **leader** + dd (normal mode): Delete the line where the cursor is on
