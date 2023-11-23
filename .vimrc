@@ -1,4 +1,3 @@
-" VIM SETTINGS  -------------------------------------------------------------- {{{
 set nocompatible
 filetype on
 filetype plugin on
@@ -21,39 +20,22 @@ set history=1000
 set wildmenu
 set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+set bg=dark
 let mapleader = "\<Space>"
 
 nnoremap <leader>bb :NERDTreeToggle<CR>
-nnoremap <leader>dd :delete<CR>
-
-" }}}
-
-" PLUGINS ---------------------------------------------------------------- {{{
+nnoremap <leader>dd dd  " Use Space + dd to delete the current line
 
 call plug#begin('~/.vim/plugged')
-
   Plug 'dense-analysis/ale'
-
   Plug 'preservim/nerdtree'
-   
   Plug 'morhetz/gruvbox'
-
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-
   Plug 'itchyny/lightline.vim'
-
   Plug 'mattn/emmet-vim'
-
+  Plug 'tpope/vim-eunuch'
 call plug#end()
 
-" }}}
-
-let g:lightline = {
-  \     'active': {
-  \         'left': [['mode', 'paste' ], ['readonly', 'filename', 'modified']],
-  \         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
-  \     }
-  \ }
-
 autocmd vimenter * ++nested colorscheme gruvbox
+set laststatus=2
