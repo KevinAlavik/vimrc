@@ -3,8 +3,8 @@ filetype on
 filetype plugin on
 filetype indent on
 set number
-set shiftwidth=4
-set tabstop=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set nobackup
 set scrolloff=10
@@ -22,10 +22,10 @@ set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 set bg=dark
 let mapleader = "\<Space>"
-command OpenRightTerminal vertical botright terminal zsh
+command OpenRightTerminal vertical botright terminal
 
-nnorema <leader>tt :OpenRightTerminal<CR>
-nnoremap <leader>bb :NERDTreeToggle<CR>
+nnoremap <leader>tt :OpenRightTerminal<CR>
+nnoremap <leader>bb :NERDTreeFocus<CR>
 nnoremap <leader>dd dd  " Use Space + dd to delete the current line
 
 call plug#begin('~/.vim/plugged')
@@ -35,8 +35,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'itchyny/lightline.vim'
-  Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-eunuch'
+  Plug 'ervandew/supertab'
+  "Plug 'yggdroot/leaderf'
+  "Plug 'chemzqm/mycomment.vim'  
 call plug#end()
 
 autocmd vimenter * ++nested colorscheme gruvbox
